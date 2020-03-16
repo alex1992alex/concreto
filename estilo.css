@@ -1,0 +1,811 @@
+*{
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing: border-box;
+}
+
+body{
+font-family: 'Simonetta', cursive;
+background:#fff;
+}
+
+/*---comienso del header-----------------------------------------------------*/
+/*--------------------------*/
+/*--------------------------*/
+.menu-bar{
+  display: none;
+}
+
+header{
+  width: 100%;
+  max-width:100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+header nav{
+  background: #ededed;
+  z-index: 1000;
+  max-width:auto;
+border-bottom: 2px solid rgba(255, 255, 0, 0.5);
+
+}
+
+header nav ul{
+
+  list-style: none;
+}
+
+header nav ul li{
+
+  display: inline-block;
+  position: relative;
+}
+
+/*----para que cambie de color*/
+header nav ul  li:hover{
+  background-color:#fddb3a;
+}
+/*---fin para que cambie de color*/
+
+
+header nav ul li a{
+  color: #222831;
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+}
+
+header nav ul li a span {
+  margin-right: 10px;
+}
+
+/*subMenu---------*/
+header nav ul li:hover .children{
+display: block;
+}
+
+/* para que se oculte el subMenu---------*/
+header nav ul li .children{
+  display: none;
+  background: #d5c455;
+  position: absolute;
+  width: 100%;
+  /* z-index para que mantenga leible y limpio*/
+  z-index: 1000;
+
+}
+
+header nav ul li .children li{
+  display: block;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/*para la flecha caret*/
+header nav ul li .caret{
+  position: relative;
+  top: 3px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/*---fin del header-----------------------------------------------------------*/
+/*--------------------------*/
+/*---------comienso section foto-----------------*/
+
+
+.contenedor-foto{
+
+
+  margin-top: 3px;
+  background:#f7f7f7;
+
+  height: 600px;
+
+}
+
+div  ul li img{
+  width: 1000px;
+
+}
+
+#contenedor{
+  width: 1000px;
+  height: 500px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+#contenedor ul{
+  list-style: none;
+  width: 2000px;
+  display:flex;
+  animation:slide 10s infinite alternate;
+
+
+}
+@keyframes slide {
+  0% {margin-left: 0px;}
+  20% {margin-left: 0px;}
+
+  25% {margin-left: -1000px;}
+  45% {margin-left: -1000px;}
+
+  50% {margin-left: -2000px;}
+  70% {margin-left: -2000px;}
+
+  75% {margin-left: -3000px;}
+  100% {margin-left: -3000px;}
+
+ }
+
+ /*---fin de section foto---------------------------------------------------*/
+ /*--------------------------*/
+ /*----------comienso  sobre-nosotros----------------*/
+
+
+.sobre-nosotros{
+  background: #dfdfdf;
+  height: 300px;
+  width:100%;
+}
+
+
+
+ .titulo {
+
+   color: #ff971d;
+  font-size: 30px;
+  text-align: center;
+   margin-bottom: 20px;
+ }
+
+ .conten-textos{
+   display: flex;
+   justify-content:space-evenly;
+
+ }
+ .contenido-textos .conten-textos{
+   display: flex;
+   width: auto;
+   height: 200px;
+   align-items: center;
+  justify-content: space-evenly;
+ }
+
+ .conten-id{
+   border-radius: 5px;
+   background:#bbbbbb;
+   width: 40%;
+   text-align: center;
+ }
+
+ .conten-id h3{
+   margin: 10px 0;
+ }
+
+
+
+
+ .conten-id p{
+   padding: 0px 10px 10px 10px;
+   font-weight: 400px;
+   text-align: justify;
+
+ }
+img {
+  width: auto;
+    overflow: hidden;
+    position: static;
+}
+
+
+ /*---fin de sobre nosotros---------------------------------------------------*/
+ /*--------------------------*/
+ /*-----------comienso de galeria---------------*/
+
+
+.galeria{
+
+  display: flex;
+
+}
+
+.contenedor-foto{
+  background:#f1f3f4;
+}
+
+.imagen-principal{
+display: flex;
+justify-content: space-evenly;
+flex-wrap: wrap;
+
+
+
+}
+
+ .imagen-port :hover{
+   border: 2px solid #feb72b;
+ }
+
+.imagen-port{
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 24%;
+  margin-bottom: 10px;
+
+
+}
+.imagen-port p{
+
+text-decoration: underline;
+}
+
+.imagen-port > img{
+
+width: 100%;
+height: 100%;
+height: 400px;
+object-fit: cover;
+display: block;
+
+}
+
+
+
+
+
+
+/* clientes*/
+.card{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cards .card{
+  background: #4d0686;
+  display: flex;
+  width: 46%;
+  height: 200px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 0 rgba(250, 250, 0, 0.5);
+
+}
+.cards.card img{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid #fff;
+ border-radius: 50%;
+
+
+
+}
+.cards.card > .conteido-texto-card{
+  width: 60%;
+  color: #fff;
+}
+.cards.card > .conteido-texto-card p{
+  font-weight: 500;
+  padding-top: 5px;
+
+  }
+  /*---fin de galeria---------------------------------------------------*/
+  /*--------------------------*/
+  /*--------comunicate con nosotros------------------*/
+
+.contactos{
+  background:#d7d1c9;
+  width: 100%;
+  height: 300px;
+}
+
+.con-contactos{
+
+  display: flex;
+  justify-content:space-evenly;
+
+
+
+}
+
+
+.contactos-id{
+  margin-top: 20px;
+  text-align: center;
+  float: left;
+  text-align:justify ;
+}
+
+.contatos-id h3{
+  margin: 20px;
+  margin-bottom: 20px;
+
+}
+.contactos-id img{
+
+
+}
+
+div li{
+
+list-style: none;
+}
+
+/*---fin de comunicate con nosotros---------------------------------------------------*/
+/*--------------------------*/
+/*--------donde estamos------------------*/
+.mapa {
+  width: 100%;
+  height: 450px;
+  background: #d4d7dd;
+}
+.sub-mapa{
+  margin-top: 10px;
+  text-align: center;
+}
+.direccion{
+  text-align: center;
+
+}
+
+/*---fin de donde estamos---------------------------------------------------*/
+/*--------------------------*/
+/*--------footer------------------*/
+
+.footer{
+  width: 100%;
+  height: 30px;
+  background: #3c4245;
+}
+
+.titulo-final{
+  text-align: center;
+font-size: 24px;
+margin: 0 0 0 0;
+color: #fff;
+}
+
+
+/* responsive adaptable a moviles*/
+/*--------------------------*/
+/*--------------------------*/
+/*--------------------------*/
+/*--------------------------*/
+
+/*--------------------------*/
+/*--------------------------*/
+
+
+
+
+@media screen and (max-width:900px){
+
+  body{
+    width: 100%;
+    padding-top:80px;
+  }
+
+  /*---comienso del header---------------------------------------------------*/
+  /*--------------------------*/
+  /*--------------------------*/
+
+  .menu-bar{
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: #575151;
+  }
+  .menu-bar .bt-menu{
+    display: block;
+    padding: 20px;
+    color:#dadddf;
+    overflow: hidden;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+ .menu-bar span{
+   float: right;
+   font-size: 40px;
+ }
+
+header nav{
+  width: 50%;
+  height: calc(100%  - 80px);
+  position: fixed;
+  right: 100%;
+  margin: 0;
+  /*para un scroll--------*/
+  overflow: scroll;
+}
+header nav ul li {
+  display: block;
+border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+ header nav ul li a{
+   display: block;
+
+ }
+ header nav ul li:hover .children{
+display: none;
+
+ }
+ header nav ul li .children{
+   width: 100%;
+   position: relative;
+
+
+}
+header nav ul li .children li a{
+  margin-left: 20px;
+}
+
+header nav ul li .caret{
+  float:  right;
+}
+
+/*--- fin del header--------------------------------------*/
+/*--------------------------*/
+/*----------- comienso  de galeria modelo dosificadora---------------*/
+
+
+
+
+ .contenedor-foto{
+
+
+   margin-top: 3px;
+   background:#f7f7f7;
+
+   height: 500px;
+
+ }
+
+ div  ul li img{
+   width: 500px;
+
+ }
+
+ #contenedor{
+   width: 500px;
+   height: 500px;
+   margin: 10px auto;
+   overflow: hidden;
+ }
+
+ #contenedor ul{
+   list-style: none;
+   width: 2000px;
+   display:flex;
+   animation:slide 15s infinite alternate;
+
+
+ }
+ @keyframes slide {
+   0% {margin-left: 0px;}
+   20% {margin-left: 0px;}
+
+   25% {margin-left: -500px;}
+   45% {margin-left: -500px;}
+
+   50% {margin-left: -1000px;}
+   70% {margin-left: -1000px;}
+
+   75% {margin-left: -1500px;}
+   100% {margin-left: -1500px;}
+
+  }
+
+
+  /*----------- fin   de galeria modelo dosificadora---------------*/
+  /*--- --------------------------------------*/
+  /*-------------sobre nosostros-------------*/
+
+.sobre-nosotros{
+   height:500px;
+ }
+
+.conten-textos{
+
+margin-top: 120px;
+  flex-direction: column;
+}
+.conten-id{
+  margin-bottom: 10px;
+  padding-top: 0;
+  width: 95%;
+}
+
+/*---fin sobre nosotros-------------------------------------*/
+/*--------------------------*/
+/*------galeria ---------------*/
+
+.galeria{
+  width: 100%;
+  height: 1850px;
+}
+.contenedor-foto{
+  width: 100%;
+display: column;
+}
+
+.imagen-principal{
+
+display: column;
+
+}
+.imagen-port{
+margin-bottom: 44px;
+width: 95%;
+  height: 400px;
+
+}
+
+.imagen-port > img{
+
+width: 100%;
+
+}
+/*---fin de galeria-------------------------------------*/
+/*--------------------------*/
+/*------comunicate con nosotros---------------*/
+
+
+.con-contactos{
+flex-direction: column;
+}
+.contactos-id{
+  margin-top: auto;
+  text-align: center;
+
+}
+
+}
+/*---fin de comunicate con nosotros-------------------------------------*/
+/*--------------------------*/
+/*--------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:500px){
+
+  body{
+    width: 100%;
+    padding-top:80px;
+  }
+
+  /*---comienso del header---------------------------------------------------*/
+  /*--------------------------*/
+  /*--------------------------*/
+
+  .menu-bar{
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: #575151;
+  }
+  .menu-bar .bt-menu{
+    display: block;
+    padding: 20px;
+    color:#dadddf;
+    overflow: hidden;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+ .menu-bar span{
+   float: right;
+   font-size: 40px;
+ }
+
+header nav{
+  width: 50%;
+  height: calc(100%  - 80px);
+  position: fixed;
+  right: 100%;
+  margin: 0;
+  /*para un scroll--------*/
+  overflow: scroll;
+}
+header nav ul li {
+  display: block;
+border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+ header nav ul li a{
+   display: block;
+
+ }
+ header nav ul li:hover .children{
+display: none;
+
+ }
+ header nav ul li .children{
+   width: 100%;
+   position: relative;
+
+
+}
+header nav ul li .children li a{
+  margin-left: 20px;
+}
+
+header nav ul li .caret{
+  float:  right;
+}
+
+/*--- fin del header--------------------------------------*/
+/*--------------------------*/
+/*----------- comienso  de galeria modelo dosificadora---------------*/
+
+
+
+
+ .contenedor-foto{
+
+
+   margin-top: 3px;
+   background:#f7f7f7;
+
+   height: 450px;
+
+ }
+
+ div  ul li img{
+   width: 350px;
+
+ }
+
+ #contenedor{
+   width: 350px;
+   height: 350px;
+   margin: 10px auto;
+   overflow: hidden;
+ }
+
+ #contenedor ul{
+   list-style: none;
+   width: 1400px;
+   display:flex;
+   animation:slide 15s infinite alternate;
+
+
+ }
+ @keyframes slide {
+   0% {margin-left: 0px;}
+   20% {margin-left: 0px;}
+
+   25% {margin-left: -350px;}
+   45% {margin-left: -350px;}
+
+   50% {margin-left: -700px;}
+   70% {margin-left: -700px;}
+
+   75% {margin-left: -1050px;}
+   100% {margin-left: -1050px;}
+
+  }
+
+
+  /*----------- fin   de galeria modelo dosificadora---------------*/
+  /*--- --------------------------------------*/
+  /*-------------sobre nosostros-------------*/
+
+.sobre-nosotros{
+   height:700px;
+ }
+
+.conten-textos{
+
+margin-top: 220px;
+  flex-direction: column;
+}
+.conten-id{
+  margin-bottom: 10px;
+  padding-top: 0;
+  width: 95%;
+}
+
+/*---fin sobre nosotros-------------------------------------*/
+/*--------------------------*/
+/*------galeria ---------------*/
+
+.galeria{
+  width: 100%;
+  height: 1050px;
+}
+.contenedor-foto{
+  width: 100%;
+display: column;
+}
+
+.imagen-principal{
+height: 100%;
+display: column;
+
+}
+.imagen-port{
+
+width: 100%;
+height: 200px;
+
+}
+
+.imagen-port > img{
+height: 200px;
+width: 100%;
+
+}
+/*---fin de galeria-------------------------------------*/
+/*--------------------------*/
+/*------comunicate con nosotros---------------*/
+
+.contactos{
+  height: 400px;
+}
+
+.con-contactos{
+flex-direction: column;
+}
+.contactos-id{
+  width: 98%;
+  margin-top: auto;
+  text-align: center;
+
+}
+/*---fin de comunicate con nosotros-------------------------------------*/
+/*--------------------------*/
+/*------donde estamos---------------*/
+.sub-mapa{
+  width: 95%;
+  height: 300px;
+}
+ iframe{
+   width: 90%;
+   height: 300px;
+ }
+
+ /*---fin de donde estamos-------------------------------------*/
+ /*--------------------------*/
+ /*------footer---------------*/
+
+.footer{
+  height: 80px;
+}
+
+.titulo-final{
+  font-size: 18px;
+  padding-top: 10px;
+}
+
+}
